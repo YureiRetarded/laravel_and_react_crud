@@ -1,9 +1,11 @@
 import React from "react";
+import Products from "./products/Products";
+import Router from "../router/Router";
 
 const App = () => {
     return (
-        <div>
-            <h1>My first react</h1>
+        <div className='App'>
+            <Router/>
         </div>
     )
 }
