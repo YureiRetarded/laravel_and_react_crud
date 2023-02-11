@@ -1,10 +1,11 @@
 import React from "react";
-import Products from "./products/Products";
 import Router from "../router/Router";
+import NavBar from "./NavBar";
 
 const App = () => {
     return (
         <div className='App'>
+            <NavBar/>
             <Router/>
         </div>
     )
