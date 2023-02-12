@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#app {
+    height: 100%;
+    width: 100%;
+    background-color: #413E66;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.products {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.productItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 2px;
+    border: solid #FF910F 1px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn_add_product > a {
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.btn_products {
+    color: white;
+    text-decoration: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+table td {
+    text-align: left;
+}
