@@ -1,27 +1,18 @@
-import React, {useState} from 'react';
-import {useNavigate} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {useNavigate, useParams} from "react-router-dom";
 
-const AddProduct = () => {
+const EditProduct = () => {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
+    const {id} =  useParams();
     const navigate = useNavigate();
-    const upload = async (e) => {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append('name', name)
-        formData.append('description', description)
-        formData.append('price', price)
-        await axios.post('api/add_product/', formData)
-            .then(() => {
-                navigate('/')
-            })
-            .catch(({response}) => {
-
-            })
-
+    const [products, setProducts] = useState([])
+    const test=() => {
+        axios.get('api/get/1').then((response) => {
+            console.log(response.data)
+        });
     }
-
     return (
         <div className='products'>
             <form className='form'>
@@ -31,12 +22,13 @@ const AddProduct = () => {
                 <input name='description' value={description} onChange={event => setDescription(event.target.value)}/>
                 <label>Price</label>
                 <input type='number' name='price' value={price} onChange={event => setPrice(event.target.value)}/>
-                <button onClick={(event) => upload(event)}>
-                    Create
-                </button>
+                {/*<button onClick={(event) => test(event)}>*/}
+                {/*    Edit*/}
+                {/*</button>*/}
             </form>
+            <button onClick={test}>a</button>
         </div>
     );
 };
 
-export default AddProduct;
+export default EditProduct;

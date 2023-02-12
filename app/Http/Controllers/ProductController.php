@@ -19,4 +19,7 @@ class ProductController extends Controller
         $product->save();
 
     }
+    public function getProduct($id){
+        return Product::find($id);
+    }
 }
